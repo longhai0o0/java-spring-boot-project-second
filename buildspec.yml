@@ -7,6 +7,7 @@ phases:
       - curl -sS -o kubectl https://amazon-eks.s3-us-west-2.amazonaws.com/1.10.3/2018-07-26/bin/linux/amd64/kubectl
       - chmod +x ./kubectl ./aws-iam-authenticator
       - export PATH=$PWD/:$PATH
+      - echo $PATH     
       - apt-get update && apt-get -y install jq python3-pip python3-dev && pip3 install --upgrade awscli
   pre_build:
       commands:
@@ -17,9 +18,9 @@ phases:
         - echo $JAVA_HOME
         - echo $JAVA_8_HOME
         - echo $JAVA_11_HOME
-        - export JAVA_HOME=$JAVA_8_HOME
-        - export JDK_HOME=$JDK_8_HOME
-        - export JRE_HOME=$JRE_8_HOME
+        - export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+        - export JDK_HOME=$JAVA_HOME
+        - export JRE_HOME=$JAVA_HOME/jre
         - echo $JAVA_HOME
         
   build:
