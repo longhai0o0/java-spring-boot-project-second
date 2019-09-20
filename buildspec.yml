@@ -14,6 +14,9 @@ phases:
         - sed -i 's@CONTAINER_IMAGE@'"$REPOSITORY_URI:$TAG"'@' hello-k8s.yml
         - $(aws ecr get-login --no-include-email)
         - export KUBECONFIG=$HOME/.kube/config
+        - echo $JAVA_HOME
+        - echo $JAVA_8_HOME
+        - echo $JAVA_11_HOME
         - export JAVA_HOME=$JAVA_8_HOME
         - export JDK_HOME=$JDK_8_HOME
         - export JRE_HOME=$JRE_8_HOME
