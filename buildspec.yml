@@ -14,6 +14,8 @@ phases:
         - sed -i 's@CONTAINER_IMAGE@'"$REPOSITORY_URI:$TAG"'@' hello-k8s.yml
         - $(aws ecr get-login --no-include-email)
         - export KUBECONFIG=$HOME/.kube/config
+        - echo $JAVA_HOME
+        - java -version
   build:
     commands:
       - ./mvnw clean package spring-boot:repackage  
