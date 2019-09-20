@@ -23,7 +23,8 @@ phases:
        
   build:
     commands:
-      - mvn clean package spring-boot:repackage  
+      - mvn clean package spring-boot:repackage
+      - dockerd 
       - docker build --tag $REPOSITORY_URI:$TAG .
 
   post_build:
