@@ -17,6 +17,8 @@ phases:
         - export JAVA_HOME=$JAVA_8_HOME
         - export JDK_HOME=$JDK_8_HOME
         - export JRE_HOME=$JRE_8_HOME
+        - echo $JAVA_HOME
+        
   build:
     commands:
       - ./mvnw clean package spring-boot:repackage  
