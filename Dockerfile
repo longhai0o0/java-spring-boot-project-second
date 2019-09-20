@@ -11,4 +11,4 @@ ARG JAR_FILE=target/spring-rest-0.1.0-SNAPSHOT.jar
 # Add the application's jar to the container
 ADD ${JAR_FILE} codestatebkend.jar
 # Run the jar file 
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/codestatebkend.jar"
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/codestatebkend.jar"]
