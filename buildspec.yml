@@ -16,6 +16,7 @@ phases:
         - export KUBECONFIG=$HOME/.kube/config
   build:
     commands:
+      - ./mvnw clean package spring-boot:repackage  
       - docker build --tag $REPOSITORY_URI:$TAG .
 
   post_build:
