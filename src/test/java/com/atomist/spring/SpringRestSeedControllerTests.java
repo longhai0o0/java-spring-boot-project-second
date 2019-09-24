@@ -15,7 +15,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(SpringRestSeedController.class)
-public class SpringRestSeedControllerTests {
+public class SpringRestSeedControllerTests extends JUnitHTMLReporter {
 
 	@Autowired
 	private MockMvc mockMvc;
