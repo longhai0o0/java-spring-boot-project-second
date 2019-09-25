@@ -23,16 +23,13 @@ public class JUnitHTMLReporter {
 	@BeforeClass
 	public static void setUp() throws IOException {
 
-		String junitReportFile = System.getProperty("user.dir")
-				+ "\junitReportFile.html";
+		String junitReportFile = System.getProperty("user.dir") + "/junitReportFile.html";
 		DateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy HH:mm:ss");
 		Date date = new Date();
 		junitReport = new File(junitReportFile);
 		junitWriter = new BufferedWriter(new FileWriter(junitReport, true));
 		junitWriter.write("<html><body>");
-		junitWriter.write("<h1>Test Execution Summary - " + dateFormat.format(date)
-				+ "</h1>");
-
+		junitWriter.write("<h1>Test Execution Summary - " + dateFormat.format(date)+ "</h1>");
 	}
 
 	@AfterClass
@@ -55,8 +52,7 @@ public class JUnitHTMLReporter {
 		@Override
 		protected void succeeded(Description description) {
 			try {
-				junitWriter.write(description.getDisplayName() + " "
-						+ "success!");
+				junitWriter.write(description.getDisplayName() + " "+ "success!");
 				junitWriter.write("<br/>");
 			} catch (Exception e1) {
 				System.out.println(e1.getMessage());
@@ -66,8 +62,7 @@ public class JUnitHTMLReporter {
 		@Override
 		protected void failed(Throwable e, Description description) {
 			try {
-				junitWriter.write(description.getDisplayName() + " "
-						+ e.getClass().getSimpleName());
+				junitWriter.write(description.getDisplayName() + " "+ e.getClass().getSimpleName());
 				junitWriter.write("<br/>");
 			} catch (Exception e2) {
 				System.out.println(e2.getMessage());
@@ -75,3 +70,4 @@ public class JUnitHTMLReporter {
 		}
 	};
 }
+
