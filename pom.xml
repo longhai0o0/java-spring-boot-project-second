@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.atomist</groupId>
-	<artifactId>spring-rest</artifactId>
+	<artifactId>spring-rest-2</artifactId>
 	<version>0.1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>spring-rest</name>
+	<name>spring-rest-2</name>
 	<description>Atomist seed for Java Spring Boot REST services</description>
 
 	<parent>
