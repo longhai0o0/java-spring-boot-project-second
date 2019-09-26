@@ -22,7 +22,7 @@ public class SpringRestSeedControllerTests {
 
 	@Test
 	public void shouldReturnGreeting() throws Exception {
-		this.mockMvc.perform(get("/hello/Rod"))
+		this.mockMvc.perform(get("/getUser/Rod"))
 				.andExpect(status().isOk())
 				.andExpect(content().string(equalTo("Your name is Rod!")));
 	}
