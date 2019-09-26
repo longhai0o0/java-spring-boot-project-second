@@ -9,7 +9,7 @@ class SpringRestSeedController {
 
     @GetMapping("/hello/{name}")
     public String person(@PathVariable String name) {
-        return "Hello " + name + "!";
+        return "Hello, My name is " + name + "!";
     }
 
 }
